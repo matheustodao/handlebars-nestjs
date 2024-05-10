@@ -14,9 +14,15 @@ importers:
       '@nestjs/core':
         specifier: ^10.0.0
         version: 10.3.8(@nestjs/common@10.3.8(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/platform-express@10.3.8)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      '@nestjs/mapped-types':
+        specifier: ^2.0.5
+        version: 2.0.5(@nestjs/common@10.3.8(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)
       '@nestjs/platform-express':
         specifier: ^10.0.0
         version: 10.3.8(@nestjs/common@10.3.8(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.3.8)
+      hbs:
+        specifier: ^4.2.0
+        version: 4.2.0
       reflect-metadata:
         specifier: ^0.2.0
         version: 0.2.2
@@ -467,6 +473,19 @@ packages:
       '@nestjs/platform-express':
         optional: true
       '@nestjs/websockets':
+        optional: true
+
+  '@nestjs/mapped-types@2.0.5':
+    resolution: {integrity: sha512-bSJv4pd6EY99NX9CjBIyn4TVDoSit82DUZlL4I3bqNfy5Gt+gXTa86i3I/i0iIV9P4hntcGM5GyO+FhZAhxtyg==}
+    peerDependencies:
+      '@nestjs/common': ^8.0.0 || ^9.0.0 || ^10.0.0
+      class-transformer: ^0.4.0 || ^0.5.0
+      class-validator: ^0.13.0 || ^0.14.0
+      reflect-metadata: ^0.1.12 || ^0.2.0
+    peerDependenciesMeta:
+      class-transformer:
+        optional: true
+      class-validator:
         optional: true
 
   '@nestjs/platform-express@10.3.8':
@@ -1401,6 +1420,9 @@ packages:
   flatted@3.3.1:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
 
+  foreachasync@3.0.0:
+    resolution: {integrity: sha512-J+ler7Ta54FwwNcx6wQRDhTIbNeyDcARMkOcguEqnEdtm0jKvN3Li3PDAb2Du3ubJYEWfYL83XMROXdsXAXycw==}
+
   foreground-child@3.1.1:
     resolution: {integrity: sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==}
     engines: {node: '>=14'}
@@ -1509,6 +1531,11 @@ packages:
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
+  handlebars@4.7.7:
+    resolution: {integrity: sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==}
+    engines: {node: '>=0.4.7'}
+    hasBin: true
+
   has-flag@3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
     engines: {node: '>=4'}
@@ -1535,6 +1562,10 @@ packages:
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
+
+  hbs@4.2.0:
+    resolution: {integrity: sha512-dQwHnrfWlTk5PvG9+a45GYpg0VpX47ryKF8dULVd6DtwOE6TEcYQXQ5QM6nyOx/h7v3bvEQbdn19EDAcfUAgZg==}
+    engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
 
   hexoid@1.0.0:
     resolution: {integrity: sha512-QFLV0taWQOZtvIRIAdBChesmogZrtuXvVWsFHZTk2SU+anspqZ2vMnoLg7IE1+Uk16N19APic1BuF8bC8c2m5g==}
@@ -2647,6 +2678,11 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  uglify-js@3.17.4:
+    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
+    engines: {node: '>=0.8.0'}
+    hasBin: true
+
   uid@2.0.2:
     resolution: {integrity: sha512-u3xV3X7uzvi5b1MncmZo3i2Aw222Zk1keqLA1YkHldREkAhAqi65wuPfe7lHx8H/Wzy+8CE7S7uS3jekIM5s8g==}
     engines: {node: '>=8'}
@@ -2688,6 +2724,9 @@ packages:
   vary@1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
+
+  walk@2.3.15:
+    resolution: {integrity: sha512-4eRTBZljBfIISK1Vnt69Gvr2w/wc3U6Vtrw7qiN5iqYJPH7LElcYh/iU4XWhdCy2dZqv1ToMyYlybDylfG/5Vg==}
 
   walker@1.0.8:
     resolution: {integrity: sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==}
@@ -2731,6 +2770,9 @@ packages:
   word-wrap@1.2.5:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
+
+  wordwrap@1.0.0:
+    resolution: {integrity: sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==}
 
   wrap-ansi@6.2.0:
     resolution: {integrity: sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==}
@@ -3325,6 +3367,11 @@ snapshots:
       '@nestjs/platform-express': 10.3.8(@nestjs/common@10.3.8(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.3.8)
     transitivePeerDependencies:
       - encoding
+
+  '@nestjs/mapped-types@2.0.5(@nestjs/common@10.3.8(reflect-metadata@0.2.2)(rxjs@7.8.1))(reflect-metadata@0.2.2)':
+    dependencies:
+      '@nestjs/common': 10.3.8(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      reflect-metadata: 0.2.2
 
   '@nestjs/platform-express@10.3.8(@nestjs/common@10.3.8(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.3.8)':
     dependencies:
@@ -4409,6 +4456,8 @@ snapshots:
 
   flatted@3.3.1: {}
 
+  foreachasync@3.0.0: {}
+
   foreground-child@3.1.1:
     dependencies:
       cross-spawn: 7.0.3
@@ -4536,6 +4585,15 @@ snapshots:
 
   graphemer@1.4.0: {}
 
+  handlebars@4.7.7:
+    dependencies:
+      minimist: 1.2.8
+      neo-async: 2.6.2
+      source-map: 0.6.1
+      wordwrap: 1.0.0
+    optionalDependencies:
+      uglify-js: 3.17.4
+
   has-flag@3.0.0: {}
 
   has-flag@4.0.0: {}
@@ -4553,6 +4611,11 @@ snapshots:
   hasown@2.0.2:
     dependencies:
       function-bind: 1.1.2
+
+  hbs@4.2.0:
+    dependencies:
+      handlebars: 4.7.7
+      walk: 2.3.15
 
   hexoid@1.0.0: {}
 
@@ -5785,6 +5848,9 @@ snapshots:
 
   typescript@5.4.5: {}
 
+  uglify-js@3.17.4:
+    optional: true
+
   uid@2.0.2:
     dependencies:
       '@lukeed/csprng': 1.1.0
@@ -5818,6 +5884,10 @@ snapshots:
       convert-source-map: 2.0.0
 
   vary@1.1.2: {}
+
+  walk@2.3.15:
+    dependencies:
+      foreachasync: 3.0.0
 
   walker@1.0.8:
     dependencies:
@@ -5879,6 +5949,8 @@ snapshots:
       isexe: 2.0.0
 
   word-wrap@1.2.5: {}
+
+  wordwrap@1.0.0: {}
 
   wrap-ansi@6.2.0:
     dependencies:
