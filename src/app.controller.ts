@@ -8,6 +8,12 @@ export class AppController {
 
   @Get()
   root(@Res() res: Response) {
-    return res.render('index', this.appService.getHello());
+    return res.render('index', {
+      ...this.appService.getHello(),
+      head: {
+        title: 'Home',
+      },
+      copyright: new Date().getFullYear(),
+    });
   }
 }
