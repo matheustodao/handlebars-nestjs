@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>App</title>
-  </head>
-  <body>
-    {{ message }}
-  </body>
-</html>
+  <p>{{ toLowercase message }}</p>
+  <p>{{ date.year }}</p>
+  <p>{{ date.format }}</p>
+
+  <ul>
+    {{!-- any block helper starts with '#'' and close with '/' --}}
+    {{#each tasks}}
+      <li>
+        {{ name }}
+        <br />
+        <span>
+          {{ options.createdAt }} | {{ options.status }}
+        </span>
+      </li>
+    {{/each}}
+  </ul>
